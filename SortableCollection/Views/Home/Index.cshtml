@@ -1,0 +1,72 @@
+﻿@model IEnumerable<SortableCollection.Models.Contact>
+
+@{
+            //Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div class="text-center">
+        <h4>
+            Table sorting example
+        </h4>
+    </div>
+    <br />
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    <a asp-action="Index" asp-route-sortOrder="@ViewData["IdSortParm"]">@Html.DisplayNameFor(model => model.Id)</a>
+                </th>
+                <th>
+                    <a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParm"]">@Html.DisplayNameFor(model => model.Name)</a>
+                </th>
+                <th>
+                    <a asp-action="Index" asp-route-sortOrder="@ViewData["CitySortParm"]">@Html.DisplayNameFor(model => model.City)</a>
+                </th>
+                <th>
+                    <a asp-action="Index" asp-route-sortOrder="@ViewData["StateSortParm"]">@Html.DisplayNameFor(model => model.State)</a>
+                </th>
+                <th>
+                    <a asp-action="Index" asp-route-sortOrder="@ViewData["PhoneSortParm"]">@Html.DisplayNameFor(model => model.Phone)</a>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var c in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => c.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => c.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => c.City)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => c.State)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => c.Phone)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <br />
+    <div class="text-center">
+        <p>Made in Norway by Freddie Christiansen</p>
+    </div>
+</body>
+</html>
+
+
+

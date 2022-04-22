@@ -28,7 +28,6 @@ namespace SortableCollection.Controllers
         new Contact{Id = 2, Name="mike", City="Spokane", State="WA", Phone="234"},
         new Contact{Id = 3, Name="lisa", City="San Jose", State="CA", Phone="345"},
         new Contact{Id = 4, Name="cathy", City="Dallas", State="TX", Phone="456"},
-        new Contact{Id = 5, Name="Åshild", City="Øyer", State="Ægir", Phone="999"}
             };
 
             var allcontacts = from c in contacts select c;
